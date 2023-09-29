@@ -21,6 +21,21 @@ describe('App', () => {
     await user.click(await screen.findByText("Phonetics"))
     expect(screen.getByText("/kæt/")).toBeInTheDocument()
   })
+    it('shows up when searching for a word',async()=> {
+      render(<App/>)
+      const user = userEvent.setup()
+
+      const input = screen.getByRole("textbox")
+      await user.type(input, "cat")
+      await user.click(screen.getByRole("button"))
+  
+      await user.click(await screen.findByText("meanings"))
+      expect(screen.getByText("noun")).toBeInTheDocument()
+
+    })
+
+
+
 });
 // tester för andra kategorier
 // testa för att texten dyker upp om du skriver fel ord
@@ -33,7 +48,7 @@ describe('data', () => {
     expect(data[0].word).toBe('strong');
 
 
-    // check if App components renders headline
+    
   });
 });
 

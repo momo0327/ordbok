@@ -38,7 +38,6 @@ function audio(audioUrl){
 }
 
 
-// lista ist för div
 
   return (
     <div>
@@ -71,8 +70,10 @@ function audio(audioUrl){
      {info?.meanings.map((meanings)=> (
        
           <div>
-            <p >{meanings?.antonyms.join(", ") }</p>
-            <p >{meanings?.partOfSpeech }</p>
+           {meanings?.antonyms.join(", ") }
+           <br />
+            {meanings?.partOfSpeech }
+            
           </div>
 
      ))}
