@@ -37,9 +37,7 @@ describe('App', () => {
 
 
 });
-// tester för andra kategorier
-// testa för att texten dyker upp om du skriver fel ord
-// testa för att texten dyker upp när du inte skriver något ord
+
 describe('data', () => {
   it('returns data from api', async() => {
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/strong`
