@@ -56,7 +56,9 @@ function audio(audioUrl){
      {info?.phonetics.map((phonetic)=>(
       <div>
         <div> {phonetic?.text} </div> 
-         {phonetic.audio &&  <button onClick={()=> {audio(phonetic?.audio)}}>Play Audio</button > 
+         {phonetic.audio &&  <button 
+           data-testid="audio-button"
+         onClick={()=> {audio(phonetic?.audio)}}>Play Audio</button > 
  }
 
 
